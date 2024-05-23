@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário sobre Corrente Elétrica e Veículos Elétricos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Questionário sobre Corrente Elétrica e Veículos Elétricos</h1>
+        <form action="processar_respostas.php" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>O que é corrente elétrica e qual a sua unidade de medida? *</label>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" id="corrente1" name="corrente_eletrica" value="Movimento ordenado de elétrons, medida em ampères" required>
+                        <label for="corrente1">Movimento ordenado de elétrons, medida em ampères</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="corrente2" name="corrente_eletrica" value="Força que impulsiona os elétrons livres, medida em volts" required>
+                        <label for="corrente2">Força que impulsiona os elétrons livres, medida em volts</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="corrente3" name="corrente_eletrica" value="Movimento ordenado de elétrons, medida em volts" required>
+                        <label for="corrente3">Movimento ordenado de elétrons, medida em volts</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="corrente4" name="corrente_eletrica" value="Movimento desordenado de elétrons, medida em ampères" required>
+                        <label for="corrente4">Movimento desordenado de elétrons, medida em ampères</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Dado a tensão V = 250 V e a resistência R = 25 Ω, qual a corrente elétrica? *</label>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" id="tensao1" name="corrente_tensao" value="10 mA" required>
+                        <label for="tensao1">10 mA</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="tensao2" name="corrente_tensao" value="0,1 A" required>
+                        <label for="tensao2">0,1 A</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="tensao3" name="corrente_tensao" value="10 A" required>
+                        <label for="tensao3">10 A</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="tensao4" name="corrente_tensao" value="0,100 kA" required>
+                        <label for="tensao4">0,100 kA</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>O que é potência elétrica e como é medida? *</label>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" id="potencia1" name="potencia_eletrica" value="Capacidade de produzir trabalho, medida em ampères" required>
+                        <label for="potencia1">Capacidade de produzir trabalho, medida em ampères</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="potencia2" name="potencia_eletrica" value="Movimento ordenado de elétrons, medido em volts" required>
+                        <label for="potencia2">Movimento ordenado de elétrons, medido em volts</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="potencia3" name="potencia_eletrica" value="A capacidade de produzir trabalho, medida em watts" required>
+                        <label for="potencia3">A capacidade de produzir trabalho, medida em watts</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>(UFU) Comumente se ouve falar dos perigos da alta voltagem em dispositivos elétricos. Todavia, uma alta voltagem pode não significar uma grande quantidade de energia se *</label>
+                <div class="radio-group">
+                    <div>
+                        <input type="radio" id="alta1" name="alta_voltagem" value="o potencial elétrico envolvido for constante" required>
+                        <label for="alta1">o potencial elétrico envolvido for constante</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="alta2" name="alta_voltagem" value="a quantidade de carga envolvida for baixa" required>
+                        <label for="alta2">a quantidade de carga envolvida for baixa</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="alta3" name="alta_voltagem" value="o campo elétrico envolvido for uniforme" required>
+                        <label for="alta3">o campo elétrico envolvido for uniforme</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="alta4" name="alta_voltagem" value="a força elétrica envolvida for baixa" required>
+                        <label for="alta4">a força elétrica envolvida for baixa</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="veiculos_eletricos">O que são Veículos Elétricos e Híbridos? Faça um resumo da sua compreensão de acordo com os textos lidos. *</label>
+                <textarea id="veiculos_eletricos" name="veiculos_eletricos" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="beneficios_veiculo">Para você, quais são os benefícios de se ter um veículo elétrico? Você teria um? *</label>
+                <textarea id="beneficios_veiculo" name="beneficios_veiculo" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="opiniao_site">O que você achou do site? *</label>
+                <textarea id="opiniao_site" name="opiniao_site" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="textos_claros">Os textos foram claros e objetivos? O que você considera que tenha faltado? *</label>
+                <textarea id="textos_claros" name="textos_claros" rows="4" required></textarea>
+            </div>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
+
